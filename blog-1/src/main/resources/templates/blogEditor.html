@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleEditor.css">
+    <title>编辑博客</title>
+</head>
+<body>
+    <div class="container">
+        <a class="homepage" href="blogOverview.html">返回首页</a>
+        <h2>编辑博客</h2>
+        <form >
+            <div class="form-group">
+                <label for="title">标题</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="summary">概要:</label>
+                <textarea id="summary" name="summary"required></textarea>
+            </div> 
+            <div class="form-group">
+                <label for="content">内容:</label>
+                <textarea id="content" name="content"required></textarea>
+            </div>
+            <button type="submit">保存</button>  
+        </form>
+    </div>
+</body>
+</html>

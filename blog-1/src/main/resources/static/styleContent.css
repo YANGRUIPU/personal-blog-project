@@ -1,0 +1,43 @@
+nav {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+nav a {
+  color: #333;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+nav a.homePage {
+  font-weight: bold;
+}
+
+/* 博客样式 */
+
+.homePage:hover {
+    background-color: yellow;
+    /* 添加其他高亮样式 */
+ }
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.blog-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.blog-summary {
+  color: #666;
+  margin-top: 10px;
+}
+
+.blog-content {
+  margin-top: 20px;
+}
