@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styleContent.css">
+    <link rel="stylesheet" type="text/css" th:href="@{styleContent.css}">
     <title>个人博客</title>
 </head>
 <body>
     <nav>
-        <a class="homePage" href="blogOverview.html">返回首页</a>
+        <a class="homePage" th:href="@{/blogManagementSystem}">返回首页</a>
         <a href="">日志</a>
         <a href="">留言板</a>
     </nav>

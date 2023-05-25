@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styleRegister.css">
+    <link rel="stylesheet" type="text/css" th:href="@{styleRegister.css}">
     <title>注册博客</title>
 </head>
 <body>
     <div class="container">
         <h2>注册博客</h2>
-        <form>
+        <form action="post" >
           <div class="form-group">
             <label for="username">用户名:</label>
             <input type="text" id="username" name="username" required>
@@ -25,7 +25,7 @@
           </div>
           <button type="submit">注册</button>
         </form>
-        <p>已有账号？<a href="login.html">点击这里登录</a></p>
+        <p>已有账号？<a th:href="@{/login}">点击这里登录</a></p>
       </div>
 </body>
 </html>
