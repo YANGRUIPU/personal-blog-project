@@ -11,18 +11,18 @@
     <div class="container">
         <a class="homepage" th:href="@{/blogManagementSystem}">返回首页</a>
         <h2>编辑博客</h2>
-        <form method="POST" th:action="@{/styleManagementSystem}">
+        <form method="POST" th:action="@{/blogEditor}">
             <div class="form-group">
                 <label for="title">标题</label>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="title" name="blogTitle" required>
             </div>
             <div class="form-group">
                 <label for="summary">概要:</label>
-                <textarea id="summary" name="summary"required></textarea>
+                <textarea id="summary" name="blogSummary"required></textarea>
             </div> 
             <div class="form-group">
                 <label for="content">内容:</label>
-                <textarea id="content" name="content"required></textarea>
+                <textarea id="content" name="blogContent"required></textarea>
             </div>
             <button type="submit">保存</button>  
         </form>

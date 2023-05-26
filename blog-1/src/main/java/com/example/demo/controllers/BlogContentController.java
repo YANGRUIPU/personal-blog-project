@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class blogEditorController {
-@GetMapping("/blogEditor")
+public class BlogContentController {
+@GetMapping("/blogContent")
 public String getblogEditor() {
-	return "blogEditor.html";
+	return "blogContent.html";
 
 } 
 }
