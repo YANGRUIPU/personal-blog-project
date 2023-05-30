@@ -1,10 +1,15 @@
 package com.example.demo.models;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,6 +22,10 @@ public class Account {
 	private String username;
 	@Column
 	private String password;
+	
+	@OneToMany
+	@JoinColumn(name = "blogContent_id")
+	private List<BlogContent> blogContents;
 
 	public Account(String username, String password) {
 		this.username = username;

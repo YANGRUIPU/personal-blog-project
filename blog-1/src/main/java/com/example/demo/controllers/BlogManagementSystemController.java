@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class BlogManagementSystemController {
 	
 @GetMapping("/blogManagementSystem")
-public ModelAndView getRegisterPage(ModelAndView mav) {
+public ModelAndView getManagementSystemPage(ModelAndView mav) {
 	UserDetails user = (UserDetails) SecurityContextHolder
 			.getContext()
 			.getAuthentication()

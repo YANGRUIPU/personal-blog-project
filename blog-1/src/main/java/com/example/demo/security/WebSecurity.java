@@ -25,7 +25,7 @@ public class WebSecurity {
 public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.formLogin(login -> login
 				.loginPage("/login")
-				.defaultSuccessUrl("/blogManagementSystem")
+				.defaultSuccessUrl("/blogContent")
 				.usernameParameter("username")
 				.passwordParameter("password")
 				.loginProcessingUrl("/user-login")
