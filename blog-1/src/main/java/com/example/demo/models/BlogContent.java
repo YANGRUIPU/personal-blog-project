@@ -19,16 +19,16 @@ public class BlogContent {
 	private String blogTitle;
 	@Column
 	private String blogSummary;
-	
-	@Column(columnDefinition="TEXT")
+
+	@Column(columnDefinition = "TEXT")
 	private String blogContent;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "account_id")
 	private Account account;
 
-	public BlogContent(String blogTitle, String blogSummary, String blogContent) {
-		super();
+	public BlogContent(String blogTitle, String blogSummary, String blogContent,Account account) {
+		this.account=account;
 		this.blogTitle = blogTitle;
 		this.blogSummary = blogSummary;
 		this.blogContent = blogContent;

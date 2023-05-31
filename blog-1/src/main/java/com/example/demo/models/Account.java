@@ -26,6 +26,16 @@ public class Account {
 	@OneToMany
 	@JoinColumn(name = "account_id")
 	private List<BlogContent> blogContents;
+	
+	
+
+	public List<BlogContent> getBlogContents() {
+		return blogContents;
+	}
+
+	public void setBlogContents(List<BlogContent> blogContents) {
+		this.blogContents = blogContents;
+	}
 
 	public Account(String username, String password) {
 		this.username = username;

@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.models.Account;
 import com.example.demo.models.BlogContent;
 import com.example.demo.repositories.AccountRepository;
 import com.example.demo.repositories.BlogRepositories;
 
 @Controller
-public class BlogContentController {
+public class BlogPageController {
 	@Autowired
 	BlogRepositories blogRepositories;
 	@Autowired
@@ -31,9 +32,9 @@ public class BlogContentController {
 				.getPrincipal();
 		
 			mav.addObject("name",user.getUsername());
-			
+			Account account=accountRepository.findByUsername(user.getUsername());
 
-		List<BlogContent> blogList2 = blogRepositories.findAll();
+		List<BlogContent> blogList2 = account.getBlogContents();
 		
 		
 			mav.addObject("blogList", blogList2);
