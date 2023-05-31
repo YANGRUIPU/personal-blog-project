@@ -19,7 +19,8 @@ public class BlogContent {
 	private String blogTitle;
 	@Column
 	private String blogSummary;
-	@Column
+	
+	@Column(columnDefinition="TEXT")
 	private String blogContent;
 	
 	@ManyToOne
@@ -35,6 +36,14 @@ public class BlogContent {
 
 	public BlogContent() {
 
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
 	}
 
 	public Long getId() {

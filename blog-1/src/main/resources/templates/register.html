@@ -9,25 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <h2>注册博客</h2>
+        <h2>ブログ登録</h2>
         <form method="POST" th:action="@{/register}" >
           <div class="form-group">
           
-      	<p style="color:red" th:if="${error}">账户已存在或密码确认有误</p>
-      	    <label for="username">用户名:</label>
+      	<p style="color:red" th:if="${error}">入力が間違っています。</p>
+      	    <label for="username">ユーザー名:</label>
             <input type="text" id="username" name="username" required>
           </div>
           <div class="form-group">
-            <label for="password">密码:</label>
+            <label for="password">パスワード:</label>
             <input type="password" id="password" name="password" required>
           </div>
           <div class="form-group">
-            <label for="confirm-password">确认密码:</label>
+            <label for="confirm-password">パスワードの確認:</label>
             <input type="password" id="confirm-password" name="confirmPassword" required>
           </div>
-          <button type="submit">注册</button>
+          <button type="submit">登録</button>
         </form>
-        <p>已有账号？<a th:href="@{/login}">点击这里登录</a></p>
+        <p>Already have a account？<a th:href="@{/login}">Sign in</a></p>
       </div>
 </body>
 </html>

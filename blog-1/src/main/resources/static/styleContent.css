@@ -30,7 +30,7 @@ nav a.homePage {
   font-weight: bold;
 }
 
-/* 博客样式 */
+博客样式
 
 .homePage:hover {
     background-color: yellow;
@@ -59,7 +59,7 @@ nav a.homePage {
   margin-top: 20px;
 }
 #Add-Blog{
-	 float: 100xp;
+	float: 100xp;
 	background-color: #007bff;
     color: #fff;
     border: none;
@@ -72,3 +72,34 @@ nav a.homePage {
     margin: 0 auto; /* 设置左右边距为auto，将按钮水平居中 */
     text-align: center; /* 将按钮文本内容居中 */
 }
+.blog-submit{
+	float: 100xp;
+	background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

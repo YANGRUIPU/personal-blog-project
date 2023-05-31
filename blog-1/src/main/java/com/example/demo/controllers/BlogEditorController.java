@@ -21,12 +21,25 @@ public class BlogEditorController {
 	}
 //存储博客数据进数据库
 	@PostMapping("/blogEditor")
-	public ModelAndView blogEditor(@RequestParam String blogTitle, @RequestParam String blogSummary,
+	public ModelAndView blogEditor(@RequestParam(required=false)  Long id,@RequestParam String blogTitle, @RequestParam String blogSummary,
 			@RequestParam String blogContent, ModelAndView mav) {
+		//添加内容
+		if(id==null) {
+			
+			
 		blogRepositories.save(new BlogContent(blogTitle, blogSummary, blogContent));
-		mav.addObject("blogTitle2", blogTitle);
-		mav.addObject("blogSummary2", blogSummary);
-		mav.setViewName("blogManagementSystem.html");
+		
+		mav.setViewName("redirect:/blogContent");
+		//修改内容
+		}else {
+			BlogContent blogContent2=blogRepositories.getById(id);
+			blogContent2.setBlogTitle(blogTitle);
+			blogContent2.setBlogContent(blogContent);
+			blogContent2.setBlogSummary(blogSummary);
+			blogRepositories.save(blogContent2);
+			
+			mav.setViewName("redirect:/blogContent");
+		}
 		return mav;
 	}
 

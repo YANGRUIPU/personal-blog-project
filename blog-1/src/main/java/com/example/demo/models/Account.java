@@ -24,7 +24,7 @@ public class Account {
 	private String password;
 	
 	@OneToMany
-	@JoinColumn(name = "blogContent_id")
+	@JoinColumn(name = "account_id")
 	private List<BlogContent> blogContents;
 
 	public Account(String username, String password) {

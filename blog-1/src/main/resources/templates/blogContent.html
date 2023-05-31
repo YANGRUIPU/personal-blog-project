@@ -5,24 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{styleContent.css}">
-    <title>个人博客</title>
+    <title>個人ブログ</title>
 </head>
 <body>
     <nav>
-        <a class="homePage" th:href="@{/blogManagementSystem}">返回博客管理系统</a>
-        <a href="">日志</a>
-        <a href="">留言板</a>
-        <a class="logout" th:href="@{/login}">登出</a>
+        <a class="homePage" th:href="@{/blogManagementSystem}">ブログ管理システムに戻る</a>
+        <a href="">ログ</a>
+        <a href="">メッセージ</a>
+        <a class="logout" th:href="@{/login}">ログアウト</a>
     </nav>
-    <h1>欢迎来到[[${name}]]的博客</h1>
+    <h1>[[${name}]]様のブログ</h1>
     <div class="container" th:each="blog : ${blogList}">
-        
-        <h2 class="blog-title" th:text="${blog.getBlogTitle()}">博客标题</h2>
+    	
+    	<form class = "blog-function" th:action="@{/change}" method="post">
+    	<input type = "hidden" name = "id" th:value= "${blog.id}">
+    	<input class = "blog-submit" type = "submit" value="添削">
+    	</form>
+    
+     	<h2 class="blog-title" th:text="${blog.getBlogTitle()}">博客标题</h2>
         <p class="blog-summary" th:text="${blog.getBlogSummary()}">博客概要。。。</p>
         <p class="blog-content" th:text="${blog.getBlogContent()}">博客内容。。。</p>
+        
+         <form class = "blog-function" th:action="@{/delete}" method="post">
+        <input type = "hidden" name = "id" th:value= "${blog.id}">
+        <input class = "blog-submit" type = "submit" value="削除">
+        </form>
        
     </div>
-    <button id="Add-Blog">添加博客</button>
+    <button id="Add-Blog">ブログ追加</button>
     <script th:src="@{styleBlogContent.js}"></script>
 </body>
 </html>
